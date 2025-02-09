@@ -11,8 +11,9 @@ Documentation
 
 The documentation is not available yet.
 <p align="center">
-  <img src="figs/cb_architecture.svg" width="600">
+  <img src="figs/cb_architecture.svg" width="450">
 </p>
+
 The framework has been used in the following publications:
 * R. Tassenoy, A. Laterre, V. Lemort, F. Contino, M. De Paepe, and S. Lecompte, "Assessing the influence of compressor inertia on the dynamic performance of large-scale vapor compression heat pumps for Carnot batteries", *Journal of Energy Storage*, vol. 101, p. 113948, Nov. 2024.<br>
   https://doi.org/10.1016/j.est.2024.113948
