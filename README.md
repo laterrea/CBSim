@@ -1,6 +1,6 @@
 # CBSim - Carnot Battery Simulator
 
-The Carnot Battery Simulator (CBSim) provides thermodynamic models for different Carnot batteries. It can be used to carry out energy and exergy analyses.
+The Carnot Battery Simulator (CBSim) provides thermodynamic models for different Carnot batteries. It can be used to carry out energy and exergy analyses of thermally integrated pumped thermal energy storage (TI-PTES).
 
 <p align="center">
   <img src="figs/CBSim_logo.svg" width="600">
