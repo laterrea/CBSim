@@ -24,3 +24,8 @@ The framework has been used in the following publications:
   https://doi.org/10.1016/j.energy.2024.132006
 * A. Laterre, O. Dumont, V. Lemort and F. Contino, "Is waste heat recovery a promising avenue for the Carnot battery? Techno-economic optimisation of an electric booster-assisted Carnot battery integrated into different data centres", *Energy Conversion and Management*, vol. 301, p. 118030, Feb. 2024.<br>
   https://doi.org/10.1016/j.enconman.2023.118030
+
+Cite CBSim
+==========
+
+Please use the following to cite CBSim when you use it:
