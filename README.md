@@ -9,7 +9,10 @@ The Carnot Battery Simulator (CBSim) provides thermodynamic models for various C
 Documentation
 =============
 
-The documentation is not available yet.
+The full documentation is not available yet.
+* #### **main_hp.py**: 
+
+The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also chosen.
 <p align="center">
   <img src="figs/cb_architecture.svg" width="450">
 </p>
