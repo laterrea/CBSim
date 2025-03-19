@@ -20,18 +20,18 @@ The model can represent basic (B) and recuperated (R) cycles. The regime, either
 </p>
 
 The model comes with a post-processing library to depict various thermodynamic diagrams.
-<div style="gap: 20px; display: flex; justify-content: center; gap: 20px; text-align: center;">
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
   <figure>
-    <img src="figs/Th_SRVCHP.svg" width="40%">
+    <img src="figs/Th_SRVCHP.svg" width="50%">
   </figure>
   <figure>
-    <img src="figs/Th_SRORC.svg" width="40%">
+    <img src="figs/Th_SRORC.svg" width="50%">
   </figure>
   <figure>
-    <img src="figs/Th_TRVCHP.svg" width="40%">
+    <img src="figs/Th_TRVCHP.svg" width="50%">
   </figure>
   <figure>
-    <img src="figs/Th_TRORC.svg" width="40%">
+    <img src="figs/Th_TRORC.svg" width="50%">
   </figure>
 </div>
 
