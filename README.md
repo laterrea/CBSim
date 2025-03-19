@@ -28,4 +28,6 @@ The model has been used in the following publications:
 Cite CBSim
 ==========
 
-Please use the following to cite CBSim when you use it:
+Please use the following reference to cite CBSim when you use it for any publication:
+> A. Laterre, O. Dumont, V. Lemort and F. Contino, "Extended mapping and systematic optimisation of the Carnot battery trilemma for sub-critical cycles with thermal integration", *Energy*, vol. 304, p. 132006, Sep. 2024.<br>
+  https://doi.org/10.1016/j.energy.2024.132006
