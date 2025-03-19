@@ -22,12 +22,10 @@ The model can represent basic (B) and recuperated (R) cycles. The regime, either
 The model comes with post-processing library to depict various thermodynamic diagrams.
 <div style="display: flex; justify-content: center; gap: 10px;">
   <figure>
-    <img src="figs/Th_TRVCHP.svg" alt="Figure 1" width="40%">
-    <figcaption>Figure 1: Transcritical Recuperated Heat Pump (TRHP)</figcaption>
+    <img src="figs/Th_TRVCHP.svg" width="40%">
   </figure>
   <figure>
-    <img src="figs/Th_TRORC.svg" alt="Figure 2" width="40%">
-    <figcaption>Figure 2: Transcritical Recuperated Organic Rankine Cycle (TRORC)</figcaption>
+    <img src="figs/Th_TRORC.svg" width="40%">
   </figure>
 </div>
 
