@@ -18,15 +18,6 @@ The model can represent basic (B) and recuperated (R) cycles. The regime, either
 <p align="center">
   <img src="figs/cb_architecture.svg" width="450">
 </p>
-|                  |                  |                  | \multicolumn{4}{c|}{Heat Pump (HP)} |
-|------------------|------------------|------------------|--------------------------------------|
-|                  |                  |                  | \multicolumn{2}{c|}{Subcritical (S)} | \multicolumn{2}{c|}{Transcritical (T)} |
-|                  |                  |                  | Basic (B) | Recuperated (R) | Basic (B) | Recuperated (R) |
-| **Organic Rankine Cycle (ORC)** | **Subcrit. (S)** | Basic (B)  | #1: SBHP + SBORC  | #3: SRHP + SBORC  | #6: TBHP + SBORC  | #11: TRHP + SBORC |
-|                  |                  | Recup. (R)  | #2: SBHP + SRORC  | #4: SRHP + SRORC  | #8: TBHP + SRORC  | #13: TRHP + SRORC |
-|                  | **Transcrit. (T)** | Basic (B)  | #5: SBHP + TBORC  | #7: SRHP + TBORC  | #9: TBHP + TBORC  | #15: TRHP + TBORC |
-|                  |                  | Recup. (R)  | #10: SBHP + TRORC | #12: SRHP + TRORC | #14: TBHP + TRORC | #16: TRHP + TRORC |
-
 
 References
 ==========
