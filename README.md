@@ -12,7 +12,8 @@ Documentation
 The full documentation is not available yet.
 * ```main_hp.py```: main script to simulate the heat pumps (vapour compression heat pumps, VCHP);
 * ```main_he.py```: main script to simulate the heat engines (organic Rankine cycles, ORC);
-* ```main_cb.py```: main script to simulate the Carnot batteries; 
+* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via thermal energy storage); 
+
 
 The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also chosen.
 <p align="center">
