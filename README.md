@@ -18,18 +18,15 @@ The model can represent basic (B) and recuperated (R) cycles. The regime, either
 <p align="center">
   <img src="figs/cb_architecture.svg" width="450">
 </p>
-\[
-	\begin{array}{ccc|cccc|}
-		\cline{4-7}
-		&                                                                                                &                                                      & \multicolumn{4}{c|}{Heat Pump (HP)}                                                                                                                                                                                                                                                                                      \\ \cline{4-7} 
-		&                                                                                                &                                                      & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Subcritical\\ (S)\end{tabular}}                                                                                        & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Transcritical\\ (T)\end{tabular}}                                                                 \\ \cline{4-7} 
-		&                                                                                                &                                                      & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Basic\\ (B)\end{tabular}}          & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Recuperated\\ (R)\end{tabular}}    & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Basic\\ (B)\end{tabular}}          & \begin{tabular}[c]{@{}c@{}}Recuperated\\ (R)\end{tabular}    \\ \hline
-		\multicolumn{1}{|c|}{\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Organic\\ Rankine\\ Cycle\\ (ORC)\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Subcrit.\\ (S)\end{tabular}}}   & \begin{tabular}[c]{@{}c@{}}Basic\\ (B)\end{tabular}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#1: SBHP\\ + SBORC\end{tabular}}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#3: SRHP\\ + SBORC\end{tabular}}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#6: TBHP\\ + SBORC\end{tabular}}  & \begin{tabular}[c]{@{}c@{}}\#11: TRHP\\ + SBORC\end{tabular} \\ \cline{3-7} 
-		\multicolumn{1}{|c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                          & \begin{tabular}[c]{@{}c@{}}Recup.\\ (R)\end{tabular} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#2: SBHP\\ + SRORC\end{tabular}}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#4: SRHP\\ + SRORC\end{tabular}}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#8: TBHP\\ + SRORC\end{tabular}}  & \begin{tabular}[c]{@{}c@{}}\#13: TRHP\\ + SRORC\end{tabular} \\ \cline{2-7} 
-		\multicolumn{1}{|c|}{}                                                                                           & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Transcrit.\\ (T)\end{tabular}}} & \begin{tabular}[c]{@{}c@{}}Basic\\ (B)\end{tabular}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#5: SBHP\\ + TBORC\end{tabular}}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#7: SRHP\\ + TBORC\end{tabular}}  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#9: TBHP\\ + TBORC\end{tabular}}  & \begin{tabular}[c]{@{}c@{}}\#15: TRHP\\ + TBORC\end{tabular} \\ \cline{3-7} 
-		\multicolumn{1}{|c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                          & \begin{tabular}[c]{@{}c@{}}Recup.\\ (R)\end{tabular} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#10: SBHP\\ + TRORC\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#12: SRHP\\ + TRORC\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}\#14: TBHP\\ + TRORC\end{tabular}} & \begin{tabular}[c]{@{}c@{}}\#16: TRHP\\ + TRORC\end{tabular} \\ \hline
-	\end{array}
-\]
+|                  |                  |                  | \multicolumn{4}{c|}{Heat Pump (HP)} |
+|------------------|------------------|------------------|--------------------------------------|
+|                  |                  |                  | \multicolumn{2}{c|}{Subcritical (S)} | \multicolumn{2}{c|}{Transcritical (T)} |
+|                  |                  |                  | Basic (B) | Recuperated (R) | Basic (B) | Recuperated (R) |
+| **Organic Rankine Cycle (ORC)** | **Subcrit. (S)** | Basic (B)  | #1: SBHP + SBORC  | #3: SRHP + SBORC  | #6: TBHP + SBORC  | #11: TRHP + SBORC |
+|                  |                  | Recup. (R)  | #2: SBHP + SRORC  | #4: SRHP + SRORC  | #8: TBHP + SRORC  | #13: TRHP + SRORC |
+|                  | **Transcrit. (T)** | Basic (B)  | #5: SBHP + TBORC  | #7: SRHP + TBORC  | #9: TBHP + TBORC  | #15: TRHP + TBORC |
+|                  |                  | Recup. (R)  | #10: SBHP + TRORC | #12: SRHP + TRORC | #14: TBHP + TRORC | #16: TRHP + TRORC |
+
 
 References
 ==========
