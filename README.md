@@ -16,7 +16,7 @@ The full documentation is not available yet.
 
 The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also chosen.
 <p align="center">
-  <img src="figs/cb_architectures.svg" width="550">
+  <img src="figs/cb_architecture.svg" width="550">
 </p>
 
 The model comes with a post-processing library to depict various thermodynamic diagrams.
