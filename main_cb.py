@@ -142,45 +142,27 @@ def eval_CB(T_hp_cs, dT_hp_cs_gl, T_he_cs, dT_he_cs_gl, T_st_ht, dT_st_sp,
     if cb_type == 15:my_CB = CB.TRVCHP_TRORC_STES2T(inputs, parameters, options)
     my_CB.evaluate()
     
-    if not my_CB.error:
-        eta_cb_elec= my_CB.eta_cb_elec
-        eta_cb_exer= my_CB.eta_cb_exer
-        E_dens_el  = my_CB.E_dens_el
-        E_dens_th  = my_CB.E_dens_th
-        error      = my_CB.error       
-    else:
-        eta_cb_elec, eta_cb_exer, E_dens_el = 0, 0, 0
-        error   = my_CB.error
-
     # 3 - Make the plots ______________________________________________________
     if post_proc and not my_CB.error:
         print('\n === HEAT PUMP === ')
         print('eta_cyclen [%]: '+str(round(my_CB.my_HP.eta_hp_cyclen*100,2)))
         print('eta_totex  [%]: '+str(round(my_CB.my_HP.eta_hp_totex *100,2)))
-        print('VC     [m³/MJ]: '+str(round(my_CB.my_HP.vol_coef*1e+6,    2)))
         print('comp.ratio [-]: '+str(round(my_CB.my_HP.comp_ratio,       2)))
         print('p_min_hp [bar]: '+str(round(my_CB.my_HP.p_hp_1*1e-5,3)))
         print('p_max_hp [bar]: '+str(round(my_CB.my_HP.p_hp_2*1e-5,3)))
         print(' === HEAT ENGINE === ')
         print('eta_cyclen [%]: '+str(round(my_CB.my_HE.eta_he_cyclen*100,2)))
         print('eta_totex  [%]: '+str(round(my_CB.my_HE.eta_he_totex *100,2)))
-        print('VC     [m³/MJ]: '+str(round(my_CB.my_HE.vol_coef*1e+6,    2)))
         print('exp. ratio [-]: '+str(round(my_CB.my_HE.exp_ratio,        2)))
         print('p_min_he [bar]: '+str(round(my_CB.my_HE.p_he_1*1e-5,3)))
         print('p_max_he [bar]: '+str(round(my_CB.my_HE.p_he_2*1e-5,3)))
         print(' === CARNOT BATTERY === ')
-        print('eta_I [%]:    '+str(eta_cb_elec*100))
-        print('eta_II [%]:   '+str(eta_cb_exer*100))
+        print('eta_P2P [%]:  '+str(my_CB.eta_cb_elec*100))
+        print('eta_II [%]:   '+str(my_CB.eta_cb_exer*100))
         print('[kWh_th/m³]:  '+str(my_CB.E_dens_th/3.6e+6))
         print('[kWh_el/m³]:  '+str(my_CB.E_dens_el/3.6e+6))
-        print('psi_hp_lorenz [%]: '+str(my_CB.my_HP.psi_hp_lorenz*100))
-        print('psi_he_lorenz [%]: '+str(my_CB.my_HE.psi_he_lorenz*100))
-        print('product       [%]: '+str(my_CB.my_HP.psi_hp_lorenz*\
-                                        my_CB.my_HE.psi_he_lorenz*100))
         print('psi_hp_carnot [%]: '+str(my_CB.my_HP.psi_hp_carnot*100))
         print('psi_he_carnot [%]: '+str(my_CB.my_HE.psi_he_carnot*100))
-        print('product       [%]: '+str(my_CB.my_HP.psi_hp_carnot*\
-                                        my_CB.my_HE.psi_he_carnot*100))
         
         if version != 'thermodynamic_full':
             print(' === HP OPERATIONS === ')
