@@ -35,10 +35,12 @@ Please use the following reference to cite CBSim when you use it for any publica
 Documentation
 =============
 
-The full documentation is not available yet.
+The full documentation is not available yet. However, the essential information required to get started with CBSim is summarised below.
+
+The ```main.py``` files contain the scripts to evaluate the cycles:
 * ```main_hp.py```: main script to simulate the heat pumps (vapour compression heat pumps, VCHP);
 * ```main_he.py```: main script to simulate the heat engines (organic Rankine cycles, ORC);
-* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via thermal energy storage);
+* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via sensible heat thermal energy storage in two tanks);
 
 A total of 16 Carnot battery configurations can be represented:
 1. **SBVCHP + SBORC**: _Subcritcal Basic Vapour Compression Heat Pump + Subcritcal Basic Organic Rankine Cycle_
