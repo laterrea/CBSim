@@ -72,12 +72,18 @@ The model comes with a post-processing library to depict the temperature-enthalp
     <img src="figs/Th_SRVCHP.svg" width="49%">
   </figure>
   <figure>
-    <img src="figs/Th_SRORC.svg" width="49%">
-  </figure>
-  <figure>
     <img src="figs/Th_TRVCHP.svg" width="49%">
   </figure>
   <figure>
+    <img src="figs/Th_SRORC.svg" width="49%">
+  </figure>
+  <figure>
     <img src="figs/Th_TRORC.svg" width="49%">
+  </figure>
+  <figure>
+    <img src="figs/Ts_SRVCHP_SRORC.svg" width="49%">
+  </figure>
+  <figure>
+    <img src="figs/Ts_TRVCHP_TRORC.svg" width="49%">
   </figure>
 </div>
