@@ -360,7 +360,7 @@ def plot_Th_ORC(HE):
     # Saturation Curve
     T_min = max(min(HE.T_he)-2,CP.PropsSI('T_MIN',HE.parameters['fluid_he'])+1)
     # T_max = min(HE.T_he_hs_su, CP.PropsSI('T_MAX',HE.parameters['fluid_he'])-1,CP.PropsSI('T_CRITICAL',HE.parameters['fluid_he'])-1)
-    T_max = min(max(HE.T_he)+0,CP.PropsSI('T_MAX',HE.parameters['fluid_he'])-1,CP.PropsSI('T_CRITICAL',HE.parameters['fluid_he'])-1)
+    T_max = min(max(HE.T_he)+5,CP.PropsSI('T_MAX',HE.parameters['fluid_he'])-1,CP.PropsSI('T_CRITICAL',HE.parameters['fluid_he'])-1)
     temp = np.linspace(T_min,T_max,1000)
     h_lq = np.zeros(len(temp))
     h_vp = np.zeros(len(temp))
@@ -760,7 +760,8 @@ def plot_Ts_VCHP_ORC_SHTES_norm(CB):
     s_sat_hp_min = CB.my_HP.s_hp_3#min(s_lq_hp)
     s_sat_hp_max = CB.my_HP.s_hp_2#max(s_vp_hp)
     ds_sat_hp    = s_sat_hp_max-s_sat_hp_min
-    s_sat_he_min = CB.my_HE.s_he_2#min(s_lq_he)
+    if recup_he:    s_sat_he_min = CB.my_HE.s_he_2r#min(s_lq_he)
+    else:           s_sat_he_min = CB.my_HE.s_he_2#min(s_lq_he)
     s_sat_he_max = CB.my_HE.s_he_3#max(s_vp_he)
     ds_sat_he    = s_sat_he_max-s_sat_he_min
     ax1.plot((s_lq_hp-s_sat_hp_min)/ds_sat_hp,temp_hpl-273.15,'--',color='black',linewidth=0.8, label=CB.parameters['fluid_hp'])
@@ -934,10 +935,15 @@ def plot_Ts_VCHP_ORC_SHTES_norm(CB):
     ax1.plot((np.asarray([CB.my_HE.s_he_4,CB.my_HE.s_he_1])-s_sat_he_min)/ds_sat_he,np.asarray([CB.T_he_cs_ex,CB.T_he_cs_su])-273.15,'x', color='darkslategrey',zorder=-5,linewidth=1.2)
     
     # --- Axes ----------------------------------------------------------------
-    T_min = 15
-    T_max = 180
-    s_min =  -0.1
-    s_max =   1.1
+    T_min = min([  15,min(CB.my_HP.T_hp)-273.15,
+                      min(CB.my_HE.T_he)-273.15])
+    T_max = max([ 180,max(CB.my_HP.T_hp)-273.15,
+                      max(CB.my_HE.T_he)-273.15])
+    
+    s_min = min([-0.2,(min(CB.my_HP.s_hp)-s_sat_hp_min)/ds_sat_hp,
+                      (min(CB.my_HE.s_he)-s_sat_he_min)/ds_sat_he])
+    s_max = max([ 1.2,(max(CB.my_HP.s_hp)-s_sat_hp_min)/ds_sat_hp,
+                      (max(CB.my_HE.s_he)-s_sat_he_min)/ds_sat_he])
     
     ax1.plot(s_min-0.02,T_min-1,'o',color='w')
     ax1.plot(s_min-0.02,T_max-1,'o',color='w')
@@ -948,7 +954,7 @@ def plot_Ts_VCHP_ORC_SHTES_norm(CB):
     ax1.legend(loc=(0.05, 0.75), frameon=False)
     ax1.set_xlabel('$\mathrm{(s-s_{TES,min})/(s_{TES,max}-s_{TES,min})}$ [-]',fontsize=13, color='dimgray', loc='right')
     ax1.spines["bottom"].set_bounds(s_min,s_max)
-    ax1.set_xticks([s_min,0.0,0.2,0.4,0.6,0.8,1.0,s_max])
+    ax1.set_xticks(np.round([s_min,0.0,0.2,0.4,0.6,0.8,1.0,s_max],2))
     ax1.spines["bottom"].set_linewidth(1.5)
     ax1.spines["bottom"].set_color('dimgray')
     ax1.set_ylabel('T [°C]',fontsize=13, color='dimgray', rotation=0, loc='top')
