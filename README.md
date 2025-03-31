@@ -9,7 +9,7 @@ The Carnot Battery Simulator (CBSim) provides thermodynamic models for various C
 Model overview
 ==============
 
-The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also chosen. Two-tank sensible heat thermal energy storage is considered by default, but the code can easily be adapted to represent other forms of storage (latent heat, single tank, etc.).
+The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also be chosen. Two-tank sensible heat thermal energy storage is considered by default, but the code can easily be adapted to represent other forms of storage (latent heat, single tank, etc.).
 <p align="center">
   <img src="figs/cb_architecture.svg" width="550">
 </p>
@@ -40,7 +40,13 @@ The full documentation is not available yet. However, the essential information 
 The ```main.py``` files contain the scripts to evaluate the cycles:
 * ```main_hp.py```: main script to simulate the heat pumps (vapour compression heat pumps, VCHP);
 * ```main_he.py```: main script to simulate the heat engines (organic Rankine cycles, ORC);
-* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via sensible heat thermal energy storage in two tanks);
+* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via sensible heat thermal energy storage in two tanks).
+
+The ```\src``` folder contains the source files in which the cycles models are implemented:
+* ```_module_heat_pump.py```: heat pumps models;
+* ```_module_heat_engine.py```: heat engines models;
+* ```_module_carnot_battery.py```: Carnot battery models (based on ```_module_heat_pump.py``` and ```_module_heat_engine.py```);
+* ```_module_plots.py```: plot functions for post-processing.
 
 A total of 16 Carnot battery configurations can be represented:
 1. **SBVCHP + SBORC**: _Subcritcal Basic Vapour Compression Heat Pump + Subcritcal Basic Organic Rankine Cycle_
