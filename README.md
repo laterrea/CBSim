@@ -40,7 +40,7 @@ The full documentation is not available yet. However, the essential information 
 The ```main.py``` files contain the scripts to evaluate the cycles:
 * ```main_hp.py```: main script to simulate the heat pumps (vapour compression heat pumps, VCHP);
 * ```main_he.py```: main script to simulate the heat engines (organic Rankine cycles, ORC);
-* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via sensible heat thermal energy storage in two tanks).
+* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via storage).
 
 The ```\src``` folder contains the source files in which the cycles models are implemented:
 * ```_module_heat_pump.py```: heat pumps models;
