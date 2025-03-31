@@ -41,24 +41,24 @@ The full documentation is not available yet.
 * ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via thermal energy storage);
 
 A total of 16 Carnot battery configurations can be represented:
-1. SBVCHP + SBORC: 
-2. SBVCHP + SRORC: 
-3. SRVCHP + SBORC: 
-4. SRVCHP + SRORC: 
-5. SBVCHP + TBORC: 
-6. TBVCHP + SBORC: 
-7. SRVCHP + TBORC: 
-8. TBVCHP + SRORC: 
-9. TBVCHP + TBORC: 
-10. SBVCHP + TRORC: 
-11. TRVCHP + SBORC: 
-12. SRVCHP + TRORC: 
-13. TRVCHP + SRORC: 
-14. TBVCHP + TRORC: 
-15. TRVCHP + TBORC: 
-16. TRVCHP + TRORC: 
+1. **SBVCHP + SBORC**: _Subcritcal Basic Vapour Compression Heat Pump + Subcritcal Basic Organic Rankine Cycle_
+2. **SBVCHP + SRORC**: _Subcritcal Basic Vapour Compression Heat Pump + Subcritcal Recuperated Organic Rankine Cycle_
+3. **SRVCHP + SBORC**: _Subcritcal Recuperated Vapour Compression Heat Pump + Subcritcal Basic Organic Rankine Cycle_
+4. **SRVCHP + SRORC**: _Subcritcal Recuperated Vapour Compression Heat Pump + Subcritcal Recuperated Organic Rankine Cycle_
+5. **SBVCHP + TBORC**: _Subcritcal Basic Vapour Compression Heat Pump + Transcritical Basic Organic Rankine Cycle_
+6. **TBVCHP + SBORC**: _Transcritical Basic Vapour Compression Heat Pump + Subcritcal Basic Organic Rankine Cycle_
+7. **SRVCHP + TBORC**: _Subcritcal Recuperated Vapour Compression Heat Pump + Transcritical Basic Organic Rankine Cycle_
+8. **TBVCHP + SRORC**: _Transcritical Basic Vapour Compression Heat Pump + Subcritcal Recuperated Organic Rankine Cycle_
+9. **TBVCHP + TBORC**: _Transcritical Basic Vapour Compression Heat Pump + Transcritical Basic Organic Rankine Cycle_
+10. **SBVCHP + TRORC**: _Subcritcal Basic Vapour Compression Heat Pump + Transcritical Recuperated Organic Rankine Cycle_
+11. **TRVCHP + SBORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Subcritcal Basic Organic Rankine Cycle_
+12. **SRVCHP + TRORC**: _Subcritcal Recuperated Vapour Compression Heat Pump + Transcritical Recuperated Organic Rankine Cycle_
+13. **TRVCHP + SRORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Subcritcal Recuperated Organic Rankine Cycle_
+14. **TBVCHP + TRORC**: _Transcritical Basic Vapour Compression Heat Pump + Transcritical Recuperated Organic Rankine Cycle_
+15. **TRVCHP + TBORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Transcritical Basic Organic Rankine Cycle_
+16. **TRVCHP + TRORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Transcritical Recuperated Organic Rankine Cycle_
 
-The model comes with a post-processing library to depict various thermodynamic diagrams.
+The model comes with a post-processing library to depict the temperature-enthalpy diagrams and temperature-entropy diagrams.
 <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
   <figure>
     <img src="figs/Th_SRVCHP.svg" width="49%">
