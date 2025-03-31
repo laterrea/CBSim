@@ -9,7 +9,7 @@ The Carnot Battery Simulator (CBSim) provides thermodynamic models for various C
 Model overview
 ==============
 
-The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also chosen.
+The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also chosen. Two-tank sensible heat thermal energy storage is considered by default, but the code can easily be adapted to represent other forms of storage (latent heat, single tank, etc.).
 <p align="center">
   <img src="figs/cb_architecture.svg" width="550">
 </p>
