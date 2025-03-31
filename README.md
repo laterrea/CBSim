@@ -6,34 +6,13 @@ The Carnot Battery Simulator (CBSim) provides thermodynamic models for various C
   <img src="figs/CBSim_logo.svg" width="600">
 </p>
 
-Documentation
-=============
-
-The full documentation is not available yet.
-* ```main_hp.py```: main script to simulate the heat pumps (vapour compression heat pumps, VCHP);
-* ```main_he.py```: main script to simulate the heat engines (organic Rankine cycles, ORC);
-* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via thermal energy storage); 
+Model overview
+==============
 
 The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also chosen.
 <p align="center">
   <img src="figs/cb_architecture.svg" width="550">
 </p>
-
-The model comes with a post-processing library to depict various thermodynamic diagrams.
-<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
-  <figure>
-    <img src="figs/Th_SRVCHP.svg" width="49%">
-  </figure>
-  <figure>
-    <img src="figs/Th_SRORC.svg" width="49%">
-  </figure>
-  <figure>
-    <img src="figs/Th_TRVCHP.svg" width="49%">
-  </figure>
-  <figure>
-    <img src="figs/Th_TRORC.svg" width="49%">
-  </figure>
-</div>
 
 References
 ==========
@@ -52,3 +31,45 @@ Cite CBSim
 Please use the following reference to cite CBSim when you use it for any publication:
 > A. Laterre, O. Dumont, V. Lemort and F. Contino, "Extended mapping and systematic optimisation of the Carnot battery trilemma for sub-critical cycles with thermal integration", *Energy*, vol. 304, p. 132006, Sep. 2024.<br>
   https://doi.org/10.1016/j.energy.2024.132006
+
+Documentation
+=============
+
+The full documentation is not available yet.
+* ```main_hp.py```: main script to simulate the heat pumps (vapour compression heat pumps, VCHP);
+* ```main_he.py```: main script to simulate the heat engines (organic Rankine cycles, ORC);
+* ```main_cb.py```: main script to simulate the Carnot batteries (heat pump and heat engine connected via thermal energy storage);
+
+A total of 16 Carnot battery configurations can be represented:
+1. SBVCHP + SBORC: 
+2. SBVCHP + SRORC: 
+3. SRVCHP + SBORC: 
+4. SRVCHP + SRORC: 
+5. SBVCHP + TBORC: 
+6. TBVCHP + SBORC: 
+7. SRVCHP + TBORC: 
+8. TBVCHP + SRORC: 
+9. TBVCHP + TBORC: 
+10. SBVCHP + TRORC: 
+11. TRVCHP + SBORC: 
+12. SRVCHP + TRORC: 
+13. TRVCHP + SRORC: 
+14. TBVCHP + TRORC: 
+15. TRVCHP + TBORC: 
+16. TRVCHP + TRORC: 
+
+The model comes with a post-processing library to depict various thermodynamic diagrams.
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
+  <figure>
+    <img src="figs/Th_SRVCHP.svg" width="49%">
+  </figure>
+  <figure>
+    <img src="figs/Th_SRORC.svg" width="49%">
+  </figure>
+  <figure>
+    <img src="figs/Th_TRVCHP.svg" width="49%">
+  </figure>
+  <figure>
+    <img src="figs/Th_TRORC.svg" width="49%">
+  </figure>
+</div>
