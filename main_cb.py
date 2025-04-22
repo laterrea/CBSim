@@ -28,7 +28,7 @@ def eval_CB(T_hp_cs, dT_hp_cs_gl, T_he_cs, dT_he_cs_gl, T_st_ht, dT_st_sp,
     p_hp_cs_su      = 1e+5
     T_hp_cs_su      = T_hp_cs + 273.15
     T_hp_cs_ex      = T_hp_cs_su - dT_hp_cs_gl
-    m_hp_cs         = 0.3333333333333
+    m_hp_cs         = 1.0
     i_hp_cs_su      = CP.PropsSI('H','T',T_hp_cs_su,'P',p_hp_cs_su,fluid_hp_cs)
     i_hp_cs_ex      = CP.PropsSI('H','T',T_hp_cs_ex,'P',p_hp_cs_su,fluid_hp_cs)
     P_hp            = 1e+3
@@ -36,7 +36,7 @@ def eval_CB(T_hp_cs, dT_hp_cs_gl, T_he_cs, dT_he_cs_gl, T_st_ht, dT_st_sp,
     p_he_cs_su      = 1e+5 
     T_he_cs_su      = T_he_cs + 273.15
     T_he_cs_ex      = T_he_cs_su + dT_he_cs_gl
-    m_he_cs         = 0.3333333333333
+    m_he_cs         = 1.0
     i_he_cs_su      = CP.PropsSI('H','T',T_he_cs_su,'P',p_he_cs_su,fluid_he_cs)
     i_he_cs_ex      = CP.PropsSI('H','T',T_he_cs_ex,'P',p_he_cs_su,fluid_he_cs)
     P_he            = 1e+3
@@ -92,8 +92,8 @@ def eval_CB(T_hp_cs, dT_hp_cs_gl, T_he_cs, dT_he_cs_gl, T_st_ht, dT_st_sp,
         'dp_he_rg_lq':  (dp_he_ev+dp_he_cd)/2,
         'dp_he_rg_vp':  (dp_he_ev+dp_he_cd)/2,
         'epsilon_he':   epsilon,
-        'm_hp_st_max':  1e+0,
-        'm_he_st_max':  1e+0,
+        'm_hp_st_max':  0e+0,
+        'm_he_st_max':  0e+0,
         'version':      version,
         'mode_hp':      True,
         'mode_he':      True,
