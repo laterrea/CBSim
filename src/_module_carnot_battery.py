@@ -94,15 +94,13 @@ class SBVCHP_SBORC_STES2T:
         self.error = True
         
         if self.parameters['version'] not in ['thermodynamic_full',
-                                              'operational_light',
-                                              'operational_full']:
+                                              'operational_light']:
             raise ValueError('An inconsistency was detected!\
                               In: '+os.path.join(os.path.abspath(__file__),
           'SBVCHP_SBORC_SHS2T','evaluate: parameters["version"] is not valid'))
         
         if self.parameters['version'] == 'thermodynamic_full'\
-        or self.parameters['version'] == 'operational_light'\
-        or self.parameters['version'] == 'operational_full':
+        or self.parameters['version'] == 'operational_light':
             if self.options['debug']:
                 self.evaluate_cycle()
                 self.error = False
@@ -130,13 +128,6 @@ class SBVCHP_SBORC_STES2T:
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -199,7 +190,7 @@ class SBVCHP_SBORC_STES2T:
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -220,7 +211,7 @@ class SBVCHP_SBORC_STES2T:
                               'wet_ex':       self.parameters['wet_ex'],}
             
             options_he     = self.options
-            
+
             self.my_HE     = HE.SBORC(inputs_he, parameters_he, options_he)
             self.my_HE.evaluate()
         
@@ -228,8 +219,7 @@ class SBVCHP_SBORC_STES2T:
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
         
     # ======================================================================= #
@@ -350,13 +340,6 @@ class SBVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -419,7 +402,7 @@ class SBVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -451,8 +434,7 @@ class SBVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 2: SRVCHP_SBORC_STES2T
@@ -492,13 +474,6 @@ class SRVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -564,7 +539,7 @@ class SRVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -593,8 +568,7 @@ class SRVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
     
 #%% 3: SRVCHP_SRORC_STES2T
@@ -634,13 +608,6 @@ class SRVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -706,7 +673,7 @@ class SRVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -738,8 +705,7 @@ class SRVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
             
 #%% 4: SBVCHP_TBORC_STES2T
@@ -779,13 +745,6 @@ class SBVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -848,7 +807,7 @@ class SBVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -877,8 +836,7 @@ class SBVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 5: TBVCHP_SBORC_STES2T
@@ -918,13 +876,6 @@ class TBVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -988,7 +939,7 @@ class TBVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -1020,8 +971,7 @@ class TBVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 6: SRVCHP_TBORC_STES2T
@@ -1061,13 +1011,6 @@ class SRVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -1133,7 +1076,7 @@ class SRVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -1163,8 +1106,7 @@ class SRVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 7: TBVCHP_SRORC_STES2T
@@ -1204,13 +1146,6 @@ class TBVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -1274,7 +1209,7 @@ class TBVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'], 
@@ -1306,8 +1241,7 @@ class TBVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 8: TBVCHP_TBORC_STES2T
@@ -1347,13 +1281,6 @@ class TBVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -1417,7 +1344,7 @@ class TBVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -1447,8 +1374,7 @@ class TBVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 9: SBVCHP_TRORC_STES2T
@@ -1488,13 +1414,6 @@ class SBVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -1556,7 +1475,7 @@ class SBVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -1589,8 +1508,7 @@ class SBVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 10: TRVCHP_SBORC_STES2T
@@ -1630,13 +1548,6 @@ class TRVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -1703,7 +1614,7 @@ class TRVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -1735,8 +1646,7 @@ class TRVCHP_SBORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 11: SRVCHP_TRORC_STES2T
@@ -1776,13 +1686,6 @@ class SRVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -1848,7 +1751,7 @@ class SRVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'], 
@@ -1881,8 +1784,7 @@ class SRVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 12: TRVCHP_SRORC_STES2T
@@ -1922,13 +1824,6 @@ class TRVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -1995,7 +1890,7 @@ class TRVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -2027,10 +1922,8 @@ class TRVCHP_SRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
-
 
 #%% 13: TBVCHP_TRORC_STES2T
 
@@ -2069,13 +1962,6 @@ class TBVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -2139,7 +2025,7 @@ class TBVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -2172,8 +2058,7 @@ class TBVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 14: TRVCHP_TBORC_STES2T
@@ -2213,13 +2098,6 @@ class TRVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -2286,7 +2164,7 @@ class TRVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -2319,8 +2197,7 @@ class TRVCHP_TBORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
 
 #%% 15: TRVCHP_TRORC_STES2T
@@ -2360,13 +2237,6 @@ class TRVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             * 'source': available heat flow rate at the source
             * 'sink':   available heat flow rate at the sink
             * 'power':  electrical power input/output
-            * 'speed':  compressor/expander speed (only for operational_full)
-        
-        Evaluation time
-        ---------------
-            ~ x.x to x.x ms per run (thermodynamic)
-            ~ x.x to x.x ms per run (operational_light)
-            ~ x.x to x.x ms per run (operational_full)
         """        
         
         # --- STORAGE SYSTEM --------------------------------------------------
@@ -2433,7 +2303,7 @@ class TRVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
             inputs_he      = self.p_he_cs_su,self.i_he_cs_su,self.p_he_cs_ex, \
                              self.i_he_cs_ex,self.m_he_cs,   self.fluid_he_cs,\
                              self.p_st_ht,   self.i_st_ht,   self.p_st_lt,    \
-                             self.i_st_lt,    self.m_he_st,                   \
+                             self.i_st_lt,   self.m_he_st,                    \
                              self.parameters['fluid_st'], self.P_he 
             
             parameters_he  = {'eta_max_ex':   self.parameters['eta_max_ex'],
@@ -2466,6 +2336,5 @@ class TRVCHP_TRORC_STES2T(SBVCHP_SBORC_STES2T):
         
         self.retrieve_kpi()
         
-        if self.parameters['version'] == 'operational_full'\
-        or self.parameters['version'] == 'operational_light':
+        if self.parameters['version'] == 'operational_light':
             self.get_operational_params()
