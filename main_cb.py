@@ -92,8 +92,8 @@ def eval_CB(T_hp_cs, dT_hp_cs_gl, T_he_cs, dT_he_cs_gl, T_st_ht, dT_st_sp,
         'dp_he_rg_lq':  (dp_he_ev+dp_he_cd)/2,
         'dp_he_rg_vp':  (dp_he_ev+dp_he_cd)/2,
         'epsilon_he':   epsilon,
-        'm_hp_st_max':  1e+9,
-        'm_he_st_max':  1e+9,
+        'm_hp_st_max':  1e+0,
+        'm_he_st_max':  1e+0,
         'version':      version,
         'mode_hp':      True,
         'mode_he':      True,
@@ -166,19 +166,19 @@ def eval_CB(T_hp_cs, dT_hp_cs_gl, T_he_cs, dT_he_cs_gl, T_st_ht, dT_st_sp,
         
         if version != 'thermodynamic_full':
             print(' === HP OPERATIONS === ')
-            print('Pel  [kW]:  '+str(my_CB.my_HP.W_in_hp_en*1e-3))
-            print('Qin  [kW]:  '+str(my_CB.my_HP.Q_in_hp_en*1e-3))
-            print('Qout [kW]:  '+str(my_CB.my_HP.Q_out_hp_en*1e-3))
-            print('src [kg/s]: '+str(my_CB.my_HP.m_hp_cs))
-            print('wf  [kg/s]: '+str(my_CB.my_HP.m_hp))
-        
-        if version != 'thermodynamic_full':
-            print(' === ORC OPERATIONS === ')
-            print('Pel  [kW]:  '+str(my_CB.my_HE.W_net_he_en*1e-3))
-            print('Qin  [kW]:  '+str(my_CB.my_HE.Q_in_he_en*1e-3))
-            print('Qout [kW]:  '+str(my_CB.my_HE.Q_out_he_en*1e-3))
-            print('sink [kg/s]:'+str(my_CB.my_HE.m_he_cs))
-            print('wf  [kg/s]: '+str(my_CB.my_HE.m_he))
+            print('Pel  [kW]:   '+str(my_CB.my_HP.W_in_hp_en*1e-3))
+            print('Qin  [kW]:   '+str(my_CB.my_HP.Q_in_hp_en*1e-3))
+            print('Qout [kW]:   '+str(my_CB.my_HP.Q_out_hp_en*1e-3))
+            print('src  [kg/s]: '+str(my_CB.my_HP.m_hp_cs))
+            print('wf   [kg/s]: '+str(my_CB.my_HP.m_hp))
+            print('sink [kg/s]: '+str(my_CB.my_HP.m_hp_hs))
+            print(' === HE OPERATIONS === ')
+            print('Pel  [kW]:   '+str(my_CB.my_HE.W_net_he_en*1e-3))
+            print('Qin  [kW]:   '+str(my_CB.my_HE.Q_in_he_en*1e-3))
+            print('Qout [kW]:   '+str(my_CB.my_HE.Q_out_he_en*1e-3))
+            print('src  [kg/s]: '+str(my_CB.my_HE.m_he_hs))
+            print('wf   [kg/s]: '+str(my_CB.my_HE.m_he))
+            print('sink [kg/s]: '+str(my_CB.my_HE.m_he_cs))
             
         from _module_plots import plot_Th_VCHP
         plot_Th_VCHP(my_CB.my_HP)
