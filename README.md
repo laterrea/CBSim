@@ -19,6 +19,8 @@ References
 ==========
 
 The model has been used in the following publications:
+* A. Laterre, "Carnot batteries for heat and power coupling : energy, exergy, economic and environmental (4E) analysis", *PhD thesis*, Université catholique de Louvain and Université de Liège, Jun. 2025.<br>
+  <http://hdl.handle.net/2078.1/302587>
 * R. Tassenoy, A. Laterre, V. Lemort, F. Contino, M. De Paepe, and S. Lecompte, "Assessing the influence of compressor inertia on the dynamic performance of large-scale vapor compression heat pumps for Carnot batteries", *Journal of Energy Storage*, vol. 101, p. 113948, Nov. 2024.<br>
   <https://doi.org/10.1016/j.est.2024.113948>
 * A. Laterre, O. Dumont, V. Lemort and F. Contino, "Extended mapping and systematic optimisation of the Carnot battery trilemma for sub-critical cycles with thermal integration", *Energy*, vol. 304, p. 132006, Sep. 2024.<br>
