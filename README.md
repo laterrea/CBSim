@@ -74,31 +74,33 @@ A total of 16 Carnot battery configurations can be represented:
   The model comes with a post-processing library to depict the temperature–enthalpy diagrams and temperature–entropy diagrams.
 </p>
 
-<div style="
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 16px;
-  text-align: center;
-  margin: 1em 0;
-">
-  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
-    <img src="figs/Th_SRVCHP.svg" alt="T–h SRVCHP" style="width: 100%; height: auto;">
-  </figure>
-  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
-    <img src="figs/Th_TRVCHP.svg" alt="T–h TRVCHP" style="width: 100%; height: auto;">
-  </figure>
-  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
-    <img src="figs/Th_SRORC.svg" alt="T–h SRORC" style="width: 100%; height: auto;">
-  </figure>
-  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
-    <img src="figs/Th_TRORC.svg" alt="T–h TRORC" style="width: 100%; height: auto;">
-  </figure>
-  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
-    <img src="figs/Ts_SRVCHP_SRORC.svg" alt="T–s SRVCHP–SRORC" style="width: 100%; height: auto;">
-  </figure>
-  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
-    <img src="figs/Ts_TRVCHP_TRORC.svg" alt="T–s TRVCHP–TRORC" style="width: 100%; height: auto;">
-  </figure>
+<div align="center">
+
+  <table>
+    <tr>
+      <td align="center" width="48%">
+        <img src="figs/Th_SRVCHP.svg" alt="T–h SRVCHP" style="width:100%; height:auto;">
+      </td>
+      <td align="center" width="48%">
+        <img src="figs/Th_TRVCHP.svg" alt="T–h TRVCHP" style="width:100%; height:auto;">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="48%">
+        <img src="figs/Th_SRORC.svg" alt="T–h SRORC" style="width:100%; height:auto;">
+      </td>
+      <td align="center" width="48%">
+        <img src="figs/Th_TRORC.svg" alt="T–h TRORC" style="width:100%; height:auto;">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="48%">
+        <img src="figs/Ts_SRVCHP_SRORC.svg" alt="T–s SRVCHP–SRORC" style="width:100%; height:auto;">
+      </td>
+      <td align="center" width="48%">
+        <img src="figs/Ts_TRVCHP_TRORC.svg" alt="T–s TRVCHP–TRORC" style="width:100%; height:auto;">
+      </td>
+    </tr>
+  </table>
+
 </div>
