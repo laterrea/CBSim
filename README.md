@@ -70,10 +70,7 @@ A total of 16 Carnot battery configurations can be represented:
 15. **TRVCHP + TBORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Transcritical Basic Organic Rankine Cycle_
 16. **TRVCHP + TRORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Transcritical Recuperated Organic Rankine Cycle_
 
-<p>
-  The model comes with a post-processing library to depict the temperature–enthalpy and temperature–entropy diagrams.
-</p>
-
+The model comes with a post-processing library to depict the temperature–enthalpy and temperature–entropy diagrams.
 <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; width:100%;">
   <img src="figs/Th_SRVCHP.svg" style="width:48%; margin-bottom:10px;" />
   <img src="figs/Th_TRVCHP.svg" style="width:48%; margin-bottom:10px;" />
