@@ -79,26 +79,26 @@ A total of 16 Carnot battery configurations can be represented:
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  gap: 16px;
+  text-align: center;
+  margin: 1em 0;
 ">
-  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
-    <img src="figs/Th_SRVCHP.svg" alt="Th SRVCHP" style="width: 100%; height: auto;">
+  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
+    <img src="figs/Th_SRVCHP.svg" alt="T–h SRVCHP" style="width: 100%; height: auto;">
   </figure>
-  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
-    <img src="figs/Th_TRVCHP.svg" alt="Th TRVCHP" style="width: 100%; height: auto;">
+  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
+    <img src="figs/Th_TRVCHP.svg" alt="T–h TRVCHP" style="width: 100%; height: auto;">
   </figure>
-  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
-    <img src="figs/Th_SRORC.svg" alt="Th SRORC" style="width: 100%; height: auto;">
+  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
+    <img src="figs/Th_SRORC.svg" alt="T–h SRORC" style="width: 100%; height: auto;">
   </figure>
-  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
-    <img src="figs/Th_TRORC.svg" alt="Th TRORC" style="width: 100%; height: auto;">
+  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
+    <img src="figs/Th_TRORC.svg" alt="T–h TRORC" style="width: 100%; height: auto;">
   </figure>
-  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
-    <img src="figs/Ts_SRVCHP_SRORC.svg" alt="Ts SRVCHP–SRORC" style="width: 100%; height: auto;">
+  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
+    <img src="figs/Ts_SRVCHP_SRORC.svg" alt="T–s SRVCHP–SRORC" style="width: 100%; height: auto;">
   </figure>
-  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
-    <img src="figs/Ts_TRVCHP_TRORC.svg" alt="Ts TRVCHP–TRORC" style="width: 100%; height: auto;">
+  <figure style="flex: 1 1 45%; max-width: 380px; margin: 0;">
+    <img src="figs/Ts_TRVCHP_TRORC.svg" alt="T–s TRVCHP–TRORC" style="width: 100%; height: auto;">
   </figure>
 </div>
