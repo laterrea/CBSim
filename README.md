@@ -1,7 +1,7 @@
 # CBSim - Carnot Battery Simulator
 
-The Carnot Battery Simulator (CBSim) provides thermodynamic models for various Carnot battery architectures. It can be used to carry out energy and exergy analyses of thermally integrated pumped thermal energy storage (TI-PTES).
-CBSim is open-source and available on GitHub: https://github.com/laterrea/CBSim
+The Carnot Battery Simulator (CBSim) provides thermodynamic models for various Carnot battery architectures. It can be used to carry out energy and exergy analyses of thermally integrated pumped thermal energy storage (TI-PTES).<br>
+CBSim is open-source and publicly available on GitHub at <https://github.com/laterrea/CBSim>.
 
 <p align="center">
   <img src="figs/CBSim_logo.svg" width="600">
@@ -36,7 +36,8 @@ Please use the following reference to cite CBSim when you use it for any publica
 Documentation
 =============
 
-The full documentation is not available yet. However, the essential information required to get started with CBSim is summarised below.
+The full documentation is not available yet. However, the essential information required to get started with CBSim is summarised below.<br>
+For questions, you can contact <antoine.laterre@uclouvain.be>.
 
 The ```main.py``` files contain the scripts to evaluate the cycles:
 * ```main_hp.py```: main script to simulate the heat pumps (vapour compression heat pumps, VCHP);
