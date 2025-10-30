@@ -70,24 +70,35 @@ A total of 16 Carnot battery configurations can be represented:
 15. **TRVCHP + TBORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Transcritical Basic Organic Rankine Cycle_
 16. **TRVCHP + TRORC**: _Transcritical Recuperated Vapour Compression Heat Pump + Transcritical Recuperated Organic Rankine Cycle_
 
-The model comes with a post-processing library to depict the temperature-enthalpy diagrams and temperature-entropy diagrams.
-<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
-  <figure>
-    <img src="figs/Th_SRVCHP.svg" width="49%">
+<p>
+  The model comes with a post-processing library to depict the temperature–enthalpy diagrams and temperature–entropy diagrams.
+</p>
+
+<div style="
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+">
+  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
+    <img src="figs/Th_SRVCHP.svg" alt="Th SRVCHP" style="width: 100%; height: auto;">
   </figure>
-  <figure>
-    <img src="figs/Th_TRVCHP.svg" width="49%">
+  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
+    <img src="figs/Th_TRVCHP.svg" alt="Th TRVCHP" style="width: 100%; height: auto;">
   </figure>
-  <figure>
-    <img src="figs/Th_SRORC.svg" width="49%">
+  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
+    <img src="figs/Th_SRORC.svg" alt="Th SRORC" style="width: 100%; height: auto;">
   </figure>
-  <figure>
-    <img src="figs/Th_TRORC.svg" width="49%">
+  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
+    <img src="figs/Th_TRORC.svg" alt="Th TRORC" style="width: 100%; height: auto;">
   </figure>
-  <figure>
-    <img src="figs/Ts_SRVCHP_SRORC.svg" width="49%">
+  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
+    <img src="figs/Ts_SRVCHP_SRORC.svg" alt="Ts SRVCHP–SRORC" style="width: 100%; height: auto;">
   </figure>
-  <figure>
-    <img src="figs/Ts_TRVCHP_TRORC.svg" width="49%">
+  <figure style="flex: 0 0 45%; text-align: center; margin: 0;">
+    <img src="figs/Ts_TRVCHP_TRORC.svg" alt="Ts TRVCHP–TRORC" style="width: 100%; height: auto;">
   </figure>
 </div>
