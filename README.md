@@ -74,17 +74,17 @@ A total of 16 Carnot battery configurations can be represented:
   The model comes with a post-processing library to depict the temperature–enthalpy and temperature–entropy diagrams.
 </p>
 
-<table>
+<table style="width:100%; border-collapse: collapse; background: transparent;">
   <tr>
-    <td><img src="figs/Th_SRVCHP.svg" width="150" /></td>
-    <td><img src="figs/Th_TRVCHP.svg" width="150" /></td>
+    <td style="text-align:center; border:none;"><img src="figs/Th_SRVCHP.svg" width="200" /></td>
+    <td style="text-align:center; border:none;"><img src="figs/Th_TRVCHP.svg" width="200" /></td>
   </tr>
   <tr>
-    <td><img src="figs/Th_SRORC.svg" width="150" /></td>
-    <td><img src="figs/Th_TRORC.svg" width="150" /></td>
+    <td style="text-align:center; border:none;"><img src="figs/Th_SRORC.svg" width="200" /></td>
+    <td style="text-align:center; border:none;"><img src="figs/Th_TRORC.svg" width="200" /></td>
   </tr>
   <tr>
-    <td><img src="figs/Ts_SRVCHP_SRORC.svg" width="150" /></td>
-    <td><img src="figs/Ts_TRVCHP_TRORC.svg" width="150" /></td>
+    <td style="text-align:center; border:none;"><img src="figs/Ts_SRVCHP_SRORC.svg" width="200" /></td>
+    <td style="text-align:center; border:none;"><img src="figs/Ts_TRVCHP_TRORC.svg" width="200" /></td>
   </tr>
 </table>
