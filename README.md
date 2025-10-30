@@ -74,30 +74,36 @@ A total of 16 Carnot battery configurations can be represented:
   The model comes with a post-processing library to depict the temperature–enthalpy and temperature–entropy diagrams.
 </p>
 
-<div align="center">
+<div align="center" style="text-align:center; white-space:normal;">
 
-  <div style="display:inline-block; width:48%; margin:1%;">
-    <img src="figs/Th_SRVCHP.svg" alt="T–h SRVCHP" style="width:100%; height:auto; border:none; background:transparent;">
-  </div>
+  <span style="display:inline-block; width:48%; margin:1%; vertical-align:top;">
+    <img src="figs/Th_SRVCHP.svg" alt="T–h SRVCHP"
+         style="width:100%; height:auto; border:none; background:transparent;">
+  </span>
 
-  <div style="display:inline-block; width:48%; margin:1%;">
-    <img src="figs/Th_TRVCHP.svg" alt="T–h TRVCHP" style="width:100%; height:auto; border:none; background:transparent;">
-  </div>
+  <span style="display:inline-block; width:48%; margin:1%; vertical-align:top;">
+    <img src="figs/Th_TRVCHP.svg" alt="T–h TRVCHP"
+         style="width:100%; height:auto; border:none; background:transparent;">
+  </span>
 
-  <div style="display:inline-block; width:48%; margin:1%;">
-    <img src="figs/Th_SRORC.svg" alt="T–h SRORC" style="width:100%; height:auto; border:none; background:transparent;">
-  </div>
+  <span style="display:inline-block; width:48%; margin:1%; vertical-align:top;">
+    <img src="figs/Th_SRORC.svg" alt="T–h SRORC"
+         style="width:100%; height:auto; border:none; background:transparent;">
+  </span>
 
-  <div style="display:inline-block; width:48%; margin:1%;">
-    <img src="figs/Th_TRORC.svg" alt="T–h TRORC" style="width:100%; height:auto; border:none; background:transparent;">
-  </div>
+  <span style="display:inline-block; width:48%; margin:1%; vertical-align:top;">
+    <img src="figs/Th_TRORC.svg" alt="T–h TRORC"
+         style="width:100%; height:auto; border:none; background:transparent;">
+  </span>
 
-  <div style="display:inline-block; width:48%; margin:1%;">
-    <img src="figs/Ts_SRVCHP_SRORC.svg" alt="T–s SRVCHP–SRORC" style="width:100%; height:auto; border:none; background:transparent;">
-  </div>
+  <span style="display:inline-block; width:48%; margin:1%; vertical-align:top;">
+    <img src="figs/Ts_SRVCHP_SRORC.svg" alt="T–s SRVCHP–SRORC"
+         style="width:100%; height:auto; border:none; background:transparent;">
+  </span>
 
-  <div style="display:inline-block; width:48%; margin:1%;">
-    <img src="figs/Ts_TRVCHP_TRORC.svg" alt="T–s TRVCHP–TRORC" style="width:100%; height:auto; border:none; background:transparent;">
-  </div>
+  <span style="display:inline-block; width:48%; margin:1%; vertical-align:top;">
+    <img src="figs/Ts_TRVCHP_TRORC.svg" alt="T–s TRVCHP–TRORC"
+         style="width:100%; height:auto; border:none; background:transparent;">
+  </span>
 
 </div>
