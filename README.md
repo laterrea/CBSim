@@ -10,7 +10,7 @@ CBSim is open-source and publicly available on GitHub at <https://github.com/lat
 Model overview
 ==============
 
-The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also be chosen. Two-tank sensible heat thermal energy storage is considered by default, but the code can easily be adapted to represent other forms of storage (latent heat, single tank, etc.).
+The model can represent basic (B) and recuperated (R) cycles. The regime, either subcritical (S) or transcritical (T), can also be chosen. Two-tank sensible heat thermal energy storage is considered by default, but the code can easily be adapted to represent other forms of storage (latent heat, single tank, etc.). For subcritical cycles, the solving time can be as low as 5 ms. Transcritical cycles take a bit longer due to the thin heat exchanger discretisation and the high pressure optimisation.
 <p align="center">
   <img src="figs/cb_architecture.svg" width="550">
 </p>
